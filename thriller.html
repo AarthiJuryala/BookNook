@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BookNook</title>
+    <link href="{{url_for('static',filename='nav.css')}}" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+ margin: 0%;
+}
+.genre{
+    padding-top:100px;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px;
+     margin: 2%;
+
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+
+.title{
+  text-align: center;
+  padding: 5px;
+ }
+
+h1{
+    padding-bottom:5px;
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 5px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size:15px;
+  font-family: 'Pacifico', cursive;;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+.genre .current{
+    background-color: white;
+    color:black;
+    transition: 10s;
+}
+</style>
+<body style="background-color:#F5E1FD">
+
+    <header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#">BookNook</a>
+				</div>
+				<nav>
+					<a href="/home">Home</a>
+          			<a href="/">Top Books</a>
+                    <a href="/recommend">Recommend</a>
+				</nav>
+			</div>
+    </header>
+
+<div class = "genre">
+    <button onclick="window.location.href='/fantasy'">Fantasy</button>
+    <button onclick="window.location.href='/romance'">Romance</button>
+    <button class="current" onclick="window.location.href='/thriller'">Thriller</button>
+    <button onclick="window.location.href='/scifi'">Science Fiction</button>
+    <button onclick="window.location.href='/classics'">Classics</button>
+</div>
+
+<div class="main">
+
+ <!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/tatoo.png')}}">
+</div>
+<div class="title">
+ <h1>
+The girl with the dragon tatoo</h1>
+</div>
+<div class="des">
+ <p>Thriller, Mystery</p>
+<button onclick="window.location.href='https://www.amazon.in/Girl-Dragon-Tattoo-Millennium-Book-ebook/dp/B00480O9L4'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/whisper lies.png')}}">
+</div>
+<div class="title">
+ <h1>
+Whisper to me your lies</h1>
+</div>
+<div class="des">
+ <p>Mystery, Fiction</p>
+<button onclick="window.location.href='https://www.amazon.in/Whisper-Me-Your-Lies-Thriller/dp/0143449524/ref=sr_1_1?hvadid=72292994359424&hvbmt=be&hvdev=c&hvqmt=e&keywords=best+thriller+novels+to+read&qid=1656141321&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/if_it_bleed.png')}}">
+</div>
+<div class="title">
+ <h1>
+If It Bleeds</h1>
+</div>
+<div class="des">
+ <p>Crime, Mystery</p>
+<button onclick="window.location.href='https://www.amazon.in/If-Bleeds-Stephen-King/dp/1982150297'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/Silence_oflamb.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Silence of The lamb</h1>
+</div>
+<div class="des">
+ <p>Mystery, psychological</p>
+<button onclick="window.location.href='https://www.amazon.in/Silence-Lambs-Hannibal-Lecter/dp/0099532921/ref=sr_1_2?hvadid=72430512916946&hvbmt=bp&hvdev=c&hvqmt=p&keywords=the+silence+of+lambs&qid=1656142033&sr=8-2'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/Im_watching.png')}}">
+</div>
+<div class="title">
+ <h1>
+IAM watching</h1>
+</div>
+<div class="des">
+ <p>Suspense, Crime</p>
+<button onclick="window.location.href='https://www.amazon.com/dp/B06Y1264PX?ots=1&linkCode=ogi&tag=cosmopolitan_auto-append-20&ascsubtag=%5Bartid%7C10049.g.28340792%5Bsrc%7C%5Bch%7C%5Blt%7C'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/The_girl_train.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Girl On The Train</h1>
+</div>
+<div class="des">
+ <p>Crime , Horror</p>
+<button onclick="window.location.href='https://www.amazon.in/Girl-Train-Paula-Hawkins/dp/0552779776/ref=sr_1_1?hvadid=82394825216302&hvbmt=bb&hvdev=c&hvqmt=p&keywords=girl+train+book&qid=1656142633&s=books&sr=1-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/Outsider.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Outsider</h1>
+</div>
+<div class="des">
+ <p>Mystery, Suspense</p>
+<button onclick="window.location.href='https://www.amazon.com/dp/1501181009?ots=1&linkCode=ogi&tag=cosmopolitan_auto-append-20&ascsubtag=%5Bartid%7C10049.g.28340792%5Bsrc%7C%5Bch%7C%5Blt%7Csale'">Visit</button>
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/thriller/Glass_Hotel.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Glass Hotel</h1>
+</div>
+<div class="des">
+ <p>Mystery , Fiction</p>
+<button onclick="window.location.href='https://www.amazon.com/dp/0525521143?ots=1&linkCode=ogi&tag=cosmopolitan_auto-append-20&ascsubtag=%5Bartid%7C10049.g.28340792%5Bsrc%7C%5Bch%7C%5Blt%7Csale'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BookNook</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link href="{{url_for('static',filename='nav.css')}}" rel="stylesheet">
+</head>
+<body>
+
+<style>
+	button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size:20px;
+  font-family: 'Pacifico', cursive;;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+</style>
+
+
+	<div class="box-area">
+		<header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#">BookNook</a>
+				</div>
+				<nav>
+					<a class="current" href="/home">Home</a>
+          			<a href="/">Top Books</a>
+            		<a href="/recommend">Recommend</a>
+				</nav>
+			</div>
+		</header>
+		<div class="banner-area">
+		</div>
+		<div class="content-area">
+			<div class="wrapper1">
+				<h2>Find your next read</h2>
+				<blockquote>
+            		A reader lives a thousand lives before he dies . . . The man who never reads lives only one
+					<cite>
+					  George R.R. Martin<br>
+					</cite>
+				</blockquote>
+
+			</div>
+
+			<button onclick="window.location.href='/fantasy'">Explore Genres</button>
+
+		</div>
+	</div>
+</body>
+</html>

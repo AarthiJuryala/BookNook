@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BookNook</title>
+    <link href="{{url_for('static',filename='nav.css')}}" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+ margin: 0%;
+}
+.genre{
+    padding-top:100px;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px;
+     margin: 2%;
+
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+
+.title{
+  text-align: center;
+  padding: 5px;
+ }
+
+h1{
+    padding-bottom:5px;
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 5px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size:15px;
+  font-family: 'Pacifico', cursive;;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.genre .current{
+    background-color: white;
+    color:black;
+    transition: 10s;
+}
+
+</style>
+<body style="background-color:#F5E1FD">
+
+    <header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#">BookNook</a>
+				</div>
+				<nav>
+					<a href="/home">Home</a>
+          			<a href="/">Top Books</a>
+                    <a href="/recommend">Recommend</a>
+				</nav>
+			</div>
+    </header>
+
+<div class = "genre">
+    <button onclick="window.location.href='/fantasy'">Fantasy</button>
+    <button onclick="window.location.href='/romance'">Romance</button>
+    <button onclick="window.location.href='/thriller'">Thriller</button>
+    <button onclick="window.location.href='/scifi'">Science Fiction</button>
+    <button class="current" onclick="window.location.href='/classics'">Classics</button>
+</div>
+
+<div class="main">
+
+ <!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/jane.png')}}">
+</div>
+<div class="title">
+ <h1>
+Jane Eyre</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Harry-Potter-Philosophers-Stone-Rowling/dp/1408855658/ref=sr_1_1?crid=VBHEOYM96VD1&keywords=harry+potter+and+the+philosophers+stone&qid=1656137547&sprefix=harry+potter+and+the+philosophers+stone%2Caps%2C274&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/littlewomen.png')}}">
+</div>
+<div class="title">
+ <h1>
+Little Women</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Percy-Jackson-Lightning-Thief-Book/dp/0141346809/ref=sr_1_1?crid=N8FQ7C134EA0&keywords=percy+jackson&qid=1656137593&sprefix=percy+jackson%2Caps%2C445&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/mockingbird.png')}}">
+</div>
+<div class="title">
+ <h1>
+To Kill A Mockingbird</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Twilight-Book-Saga/dp/1904233651/ref=sr_1_3?crid=2J0BAHVYFZE1U&keywords=twilight&qid=1656137892&sprefix=twilight%2Caps%2C496&sr=8-3'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/thegg.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Great Gatsby</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Mortal-Instruments-City-Bones/dp/1406362166/ref=sr_1_2?crid=2XK1E5J8S8NQ5&keywords=the+mortal+instruments&qid=1656137937&sprefix=the+mort%2Caps%2C239&sr=8-2'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/rye.png')}}">
+</div>
+<div class="title">
+ <h1>
+Catcher of the Rye</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Six-Crows-Leigh-Bardugo/dp/1780622287/ref=sr_1_1?crid=3QH503ISOF0UJ&keywords=six+of+crows&qid=1656137978&sprefix=six+%2Caps%2C499&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/bookthief.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Book Thief</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Lunar-Chronicles-Cinder-Marissa-Meyer/dp/0141340134/ref=sr_1_1?crid=3TI7K71SG4VC9&keywords=cinder&qid=1656138007&sprefix=cinder%2Caps%2C393&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/pandp.png')}}">
+</div>
+<div class="title">
+ <h1>
+Pride and Prejudice</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Ember-Ashes-Quartet-Book/dp/0008108420/ref=sr_1_1?crid=1LI69HZ84MWWJ&keywords=an+ember+in+the+ashes&qid=1656138040&sprefix=an+emb%2Caps%2C557&sr=8-1'">Visit</button>
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/classics/wuthering.png')}}">
+</div>
+<div class="title">
+ <h1>
+Wuthering Heights</h1>
+</div>
+<div class="des">
+ <p></p>
+<button onclick="window.location.href='https://www.amazon.in/Court-Thorns-Roses-Sarah-Maas/dp/1526605392/ref=sr_1_1?crid=3MW4L91ZGMVHP&keywords=acotar&qid=1656138070&sprefix=acotar%2Caps%2C493&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+
+</div>
+</body>
+</html>

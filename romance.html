@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BookNook</title>
+    <link href="{{url_for('static',filename='nav.css')}}" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+ margin: 0%;
+}
+.genre{
+    padding-top:100px;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px;
+     margin: 2%;
+
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+
+.title{
+  text-align: center;
+  padding: 5px;
+ }
+
+h1{
+    padding-bottom:5px;
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 5px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size:15px;
+  font-family: 'Pacifico', cursive;;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+.genre .current{
+    background-color: white;
+    color:black;
+    transition: 10s;
+}
+
+</style>
+<body style="background-color:#F5E1FD">
+
+    <header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#">BookNook</a>
+				</div>
+				<nav>
+					<a href="/home">Home</a>
+          			<a href="/">Top Books</a>
+                    <a href="/recommend">Recommend</a>
+				</nav>
+			</div>
+    </header>
+
+<div class = "genre">
+    <button onclick="window.location.href='/fantasy'">Fantasy</button>
+    <button class="current" onclick="window.location.href='/romance'">Romance</button>
+    <button onclick="window.location.href='/thriller'">Thriller</button>
+    <button onclick="window.location.href='/scifi'">Science Fiction</button>
+    <button onclick="window.location.href='/classics'">Classics</button>
+</div>
+
+<div class="main">
+
+ <!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/notebook.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Notebook</h1>
+</div>
+<div class="des">
+ <p>Adult</p>
+<button onclick="window.location.href='https://www.amazon.in/Notebook-Nicholas-Sparks-ebook/dp/B004TSKL44/ref=sr_1_omk_2?crid=24G8GEML2TTQW&keywords=the+notebook&qid=1656141612&sprefix=the+note%2Caps%2C443&sr=8-2'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/achilles.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Song of Achilles</h1>
+</div>
+<div class="des">
+ <p>Adult, Greek</p>
+<button onclick="window.location.href='https://www.amazon.in/Achilles-Bloomsbury-Publishing-Private-Limited/dp/938900022X/ref=sr_1_1?crid=1Q6LMY7B91QTJ&keywords=song+of+achilles&qid=1656141685&sprefix=song+%2Caps%2C230&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/evelyn.png')}}">
+</div>
+<div class="title">
+ <h1>
+Evelyn Hugo</h1>
+</div>
+<div class="des">
+ <p>Adult, Hollywood</p>
+<button onclick="window.location.href='https://www.amazon.in/Seven-Husbands-Evelyn-Hugo-Novel/dp/1501161938/ref=sr_1_1?crid=20R09XA9SBST3&keywords=evelyn+hugo&qid=1656141818&sprefix=evelyn%2Caps%2C940&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/rwrb.png')}}">
+</div>
+<div class="title">
+ <h1>
+Red, White & Royal Blue</h1>
+</div>
+<div class="des">
+ <p>New Adult, LGBTQ+</p>
+<button onclick="window.location.href='https://www.amazon.in/Red-White-Royal-Blue-Novel/dp/1250316774/ref=sr_1_1?crid=391DE5EALGYVN&keywords=red+white+royal+blue&qid=1656141859&sprefix=red+white%2Caps%2C2798&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/fault.png')}}">
+</div>
+<div class="title">
+ <h1>
+Fault in Our Stars</h1>
+</div>
+<div class="des">
+ <p>Young Adult</p>
+<button onclick="window.location.href='https://www.amazon.in/Fault-our-Stars-John-Green/dp/0141345659/ref=sr_1_1?crid=2P90IAS9ZE0V9&keywords=fault+in+our+stars&qid=1656141889&sprefix=fault+%2Caps%2C319&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/anna.png')}}">
+</div>
+<div class="title">
+ <h1>
+Anna and the French Kiss</h1>
+</div>
+<div class="des">
+ <p>Young Adult</p>
+<button onclick="window.location.href='https://www.amazon.in/Anna-French-Kiss/dp/140957993X/ref=sr_1_1?crid=3F07T283XUTSV&keywords=anna+and+the+french+kiss&qid=1656141976&sprefix=anna+and+the%2Caps%2C1331&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/mebefu.png')}}">
+</div>
+<div class="title">
+ <h1>
+Me Before You</h1>
+</div>
+<div class="des">
+ <p>Adult</p>
+<button onclick="window.location.href='https://www.amazon.in/Me-Before-You-Jojo-Moyes/dp/0718157834/ref=sr_1_1?crid=QHMO4PKTKVAM&keywords=me+before+you&qid=1656142013&sprefix=me+before+you%2Caps%2C12548&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/romance/coho.png')}}">
+</div>
+<div class="title">
+ <h1>
+It Ends With Us</h1>
+</div>
+<div class="des">
+ <p>Adult</p>
+<button onclick="window.location.href='https://www.amazon.in/Ends-Us-Novel-Colleen-Hoover/dp/1501110365/ref=sr_1_1?crid=13Y2TIMYWGF11&keywords=It+Ends+With+Us&qid=1656142075&sprefix=it+ends+with+us%2Caps%2C3301&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+
+</div>
+</body>
+</html>

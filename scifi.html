@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BookNook</title>
+    <link href="{{url_for('static',filename='nav.css')}}" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+ margin: 0%;
+}
+.genre{
+    padding-top:100px;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px;
+     margin: 2%;
+
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+
+.title{
+  text-align: center;
+  padding: 5px;
+ }
+
+h1{
+    padding-bottom:5px;
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 5px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size:15px;
+  font-family: 'Pacifico', cursive;;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+.genre .current{
+    background-color: white;
+    color:black;
+    transition: 10s;
+}
+
+</style>
+<body style="background-color:#F5E1FD">
+
+    <header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#">BookNook</a>
+				</div>
+				<nav>
+					<a href="/home">Home</a>
+          			<a href="/">Top Books</a>
+				</nav>
+			</div>
+    </header>
+
+<div class = "genre">
+    <button onclick="window.location.href='/fantasy'">Fantasy</button>
+    <button onclick="window.location.href='/romance'">Romance</button>
+    <button onclick="window.location.href='/thriller'">Thriller</button>
+    <button  class="current" onclick="window.location.href='/scifi'">Science Fiction</button>
+    <button onclick="window.location.href='/classics'">Classics</button>
+</div>
+
+<div class="main">
+
+ <!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/1984.png')}}">
+</div>
+<div class="title">
+ <h1>
+1984</h1>
+</div>
+<div class="des">
+ <p>Social Science , Political</p>
+<button onclick="window.location.href='https://www.amazon.in/1984-George-Orwell/dp/9389053730/ref=sr_1_3?hvadid=72774003498396&hvbmt=be&hvdev=c&hvqmt=e&keywords=1984+books&qid=1656146775&sr=8-3'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/Ender.png')}}">
+</div>
+<div class="title">
+ <h1>
+Ender's Game</h1>
+</div>
+<div class="des">
+ <p>Fiction , Action</p>
+<button onclick="window.location.href='https://www.amazon.in/Enders-Game-Orson-Scott-Card/dp/0356500845/ref=sr_1_1?hvadid=82807142110973&hvbmt=be&hvdev=c&hvqmt=e&keywords=ender+game+book&qid=1656146933&sr=8-1'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/jurrasic.png')}}">
+</div>
+<div class="title">
+ <h1>
+Jurrassic Park</h1>
+</div>
+<div class="des">
+ <p>Adventure , Action</p>
+<button onclick="window.location.href='https://www.amazon.in/Jurassic-Park-Novel-Michael-Crichton/dp/0345538986'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/flower.png')}}">
+</div>
+<div class="title">
+ <h1>
+Flower for algernon</h1>
+</div>
+<div class="des">
+ <p>Science , psychological</p>
+<button onclick="window.location.href='https://www.amazon.in/Flowers-Algernon-Daniel-Keyes/dp/015603008X'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/fah451.png')}}">
+</div>
+<div class="title">
+ <h1>
+Fahrenheit451</h1>
+</div>
+<div class="des">
+ <p>Utopian fiction</p>
+<button onclick="window.location.href='https://www.amazon.in/Fahrenheit-451-Novel-Ray-Bradbury/dp/1451673264'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/clock.png')}}">
+</div>
+<div class="title">
+ <h1>
+A Clockwork Orange</h1>
+</div>
+<div class="des">
+ <p>Science , fiction</p>
+<button onclick="window.location.href='https://www.amazon.in/Clockwork-Orange-Anthony-Burgess/dp/0393089134'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/2001.png')}}">
+</div>
+<div class="title">
+ <h1>
+2001: a space odyssey</h1>
+</div>
+<div class="des">
+ <p>Adventure</p>
+<button onclick="window.location.href='https://www.amazon.in/2001-Space-Odyssey/dp/0451457994/ref=sr_1_1?hvadid=72430406165210&hvbmt=be&hvdev=c&hvqmt=e&keywords=a+space+odyssey+2001&qid=1656147620&sr=8-1'">Visit</button>
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="{{url_for('static',filename='images/scifi/moon.png')}}">
+</div>
+<div class="title">
+ <h1>
+The Moon is a Harsh Mistress</h1>
+</div>
+<div class="des">
+ <p>Mystery , Fiction</p>
+<button onclick="window.location.href='https://www.amazon.in/Moon-Harsh-Mistress-Robert-Heinlein/dp/0312863551'">Visit</button>
+</div>
+</div>
+<!--cards -->
+
+
+
+</div>
+</body>
+</html>
